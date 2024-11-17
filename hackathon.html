@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driving Sathi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar .menu-icon,
+    .navbar .profile-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .navbar .menu-icon {
+      margin-right: auto;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .main .robot-icon {
+      font-size: 80px;
+      margin: 20px 0;
+    }
+
+    .main .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .main .buttons button {
+      padding: 10px 20px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #000;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .main .buttons button:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .input-box {
+      width: 90%;
+      margin-top: 20px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .buttons button {
+        width: 100%;
+      }
+
+      .input-box {
+        width: 100%;
+      }
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+
+    .robot-icon:hover {
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="menu-icon">☰</div>
+    <div class="logo">HI, LEARNER</div>
+    <div class="profile-icon">👤</div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="robot-icon">🤖</div>
+    <h2>Driving Sathi</h2>
+    <div class="buttons">
+      <button>Bike</button>
+      <button>Car</button>
+      <button>Scooty</button>
+      <button>3 Wheeler</button>
+      <button>Multi-axel</button>
+      <button>Suggestion</button>
+    </div>
+    <div class="input-box">
+      <input type="text" placeholder="Type your message here" />
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
